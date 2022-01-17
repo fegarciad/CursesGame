@@ -36,7 +36,13 @@ def main(stdscr) -> None:
             break
         
         if player.check_health(projectiles_on_screen, enemies_on_screen):
+            stdscr.clear()
+            stdscr.nodelay(False)
+            stdscr.addstr(stdscr.getmaxyx()[0]//2, stdscr.getmaxyx()[1]//2, f'YOU DIED!')
+            stdscr.refresh()
+            stdscr.getch()
             break
+
         stdscr.addstr(player.row, player.col, f'{player.char}')
         stdscr.addstr(1, 1, f'Score: {player_score}')
 

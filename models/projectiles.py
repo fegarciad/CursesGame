@@ -10,7 +10,7 @@ class Projectile:
         self.direction = direction
         self.damage = 1
         self.counter = 0
-        self.speed = 100
+        self.speed = 50
         self.max_yx = max_yx
         self.char = '\u2600'
 
